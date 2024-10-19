@@ -25,15 +25,15 @@
 
 <body class="" style="visibility: hidden;">
 
-<!-- <section id="top_sect" class="second">
-    <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello, World!»</button>
-    <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
-    <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
-    <button onclick="DemoApp.toggleBackButton(this);">Show Back Button</button>
-    <button onclick="DemoApp.toggleSettingsButton(this);">Show Settings Button</button>
-    <button onclick="DemoApp.toggleMainButton(this);">Hide Main Button</button>
+<section id="top_sect" class="second">
+    <button id="main_btn" onclick="tg.sendMessage('');">Send «Hello, World!»</button>
+    <button id="with_webview_btn" onclick="tg.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
+    <button id="data_btn" onclick="tg.sendTime(true);">Send current time to bot (x10)</button>
+    <button onclick="tg.toggleBackButton(this);">Show Back Button</button>
+    <button onclick="tg.toggleSettingsButton(this);">Show Settings Button</button>
+    <button onclick="tg.toggleMainButton(this);">Hide Main Button</button>
     <input type="text" placeholder="Input text in regular input..." id="regular_field" />
-</section> -->
+</section>
 
 <section>
     <div id="btn_status" class="hint" style="display: none;"></div>
@@ -138,10 +138,10 @@
     </div> -->
 
     <pre><code id="webview_data"></code></pre>
-    <!-- <div class="hint">
+    <div class="hint">
         Data passed to webview.
         <span id="webview_data_status" class="status_need">Checking hash...</span>
-    </div> -->
+    </div>
     <!-- <pre><code id="theme_data"></code></pre>
     <div class="hint">
         Theme params
@@ -825,7 +825,7 @@
         document.getElementById('theme_data').innerHTML = JSON.stringify(Telegram.WebApp.themeParams, null, 2);
     });
 
-    if (DemoApp.initDataUnsafe.query_id) {
+    if (tg.initDataUnsafe.query_id) {
         document.getElementById('main_btn').style.display = 'block';
     }
     
